@@ -20,25 +20,33 @@
         private Color _lineColor = Color.white;
 
         [SerializeField]
-        private LayerMask _layerMask; 
+        private LayerMask _layerMask;
+
+        [SerializeField]
+        private GameObject _player = null;
 
         private readonly Vector3 _offset = new Vector3(0, 0.5f, 0);
 
 
         public void SetWaypoint(Transform waypointTransform)
         {
-            //Transform lastWaypoint = _waypoints[_waypoints.Count - 1];
+            if (_waypoints.Count == 0)
+            {
+                _waypoints.Add(_player.transform);
+            }
 
-            //Vector3 rayDirection = waypointTransform.position - lastWaypoint.position;
+            Transform lastWaypoint = _waypoints[_waypoints.Count - 1];
 
-            //bool rayHit = Physics.Raycast(waypointTransform.position, rayDirection);
+            Vector3 rayDirection = waypointTransform.position - lastWaypoint.position;
 
-            //if (rayHit == false)
-            //{
+            Debug.Log(rayDirection);
+
+            if (Physics.Raycast(waypointTransform.position, rayDirection, rayDirection.magnitude) == true)
+            {
                 _waypoints.Add(waypointTransform);
-            //    Debug.Log("loel");
-            //}
-            
+                Debug.Log("loel");
+            }
+
 
         }
 

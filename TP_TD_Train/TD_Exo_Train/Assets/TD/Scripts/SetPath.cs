@@ -51,7 +51,7 @@ public class SetPath : MonoBehaviour
 
             _path.SetWaypoint(go.transform);
 
-            Debug.Log(hitdata.point);
+            
 
         }
         
