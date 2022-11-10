@@ -11,7 +11,7 @@ public class FlameThrowerProjectile : MonoBehaviour
     
 
     [SerializeField]
-    private float _damage = 1f;
+    private int _damage = 1;
 
     [SerializeField]
     private float _damageRate = 0.3f;

@@ -6,7 +6,7 @@ using UnityEngine;
 public class FlameThrowerLauncher : AWeapon
 {
     [SerializeField]
-    private float _damage = 1f;
+    private int _damage = 1;
 
     //[SerializeField]
     //private FlameThrowerProjectile _projectile = null;
