@@ -47,7 +47,7 @@
 				_towerSlots[i].OnTowerSlotClicked -= TowerSlotController_OnTowerSlotClicked;
 			}
 		}
-
+		
 		private void TowerSlotController_OnTowerSlotClicked(TowerSlot sender)
 		{
 			if (_state == State.Available)
