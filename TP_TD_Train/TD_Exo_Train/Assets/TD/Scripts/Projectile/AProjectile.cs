@@ -10,6 +10,7 @@
         [SerializeField]
         private int _damage = 1;
 
+
         protected virtual void BeforeDestroy()
         {
 

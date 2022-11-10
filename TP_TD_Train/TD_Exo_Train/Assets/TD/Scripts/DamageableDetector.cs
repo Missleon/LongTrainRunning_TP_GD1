@@ -8,6 +8,12 @@
 		[System.NonSerialized]
 		private List<Damageable> _damageablesInRange = new List<Damageable>();
 
+		public List<Damageable> GetDamageablesInRange()
+		{
+			return _damageablesInRange;
+
+        }
+
 		public bool HasAnyDamageableInRange()
 		{
 			return _damageablesInRange.Count > 0;
@@ -66,7 +72,7 @@
 			}
 		}
 
-		private void Damageable_OnDamageTaken(Damageable caller, int currentHealth, int damageTaken)
+		private void Damageable_OnDamageTaken(Damageable caller, float currentHealth, float damageTaken)
 		{
 			if (currentHealth <= 0)
 			{
