@@ -25,28 +25,40 @@
         [SerializeField]
         private GameObject _player = null;
 
+        [SerializeField]
+        private int _waypointLimit = 6;
+
         private readonly Vector3 _offset = new Vector3(0, 0.5f, 0);
 
 
         public void SetWaypoint(Transform waypointTransform)
         {
-            if (_waypoints.Count == 0)
+            //if (_waypoints.Count <= 0)
+            //{
+            //    _waypoints.Add(_player.transform);
+            //}
+
+            //Transform lastWaypoint = _waypoints[_waypoints.Count - 1];
+
+            //Vector3 rayDirection = waypointTransform.position - lastWaypoint.position;
+
+            //Debug.DrawRay(waypointTransform.position, rayDirection, Color.red, 100, true);
+
+            //if (Physics.Raycast(waypointTransform.position, rayDirection, rayDirection.magnitude - 0.5f) == true)
+            //{
+
+            //    Debug.Log("loel");
+            //}
+
+            if (_waypoints.Count >= 6)
             {
-                _waypoints.Add(_player.transform);
+
             }
-
-            Transform lastWaypoint = _waypoints[_waypoints.Count - 1];
-
-            Vector3 rayDirection = waypointTransform.position - lastWaypoint.position;
-
-            Debug.Log(rayDirection);
-
-            if (Physics.Raycast(waypointTransform.position, rayDirection, rayDirection.magnitude) == true)
+            else
             {
+
                 _waypoints.Add(waypointTransform);
-                Debug.Log("loel");
             }
-
 
         }
 
