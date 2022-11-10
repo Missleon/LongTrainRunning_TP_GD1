@@ -606,8 +606,7 @@ MonoBehaviour:
   _timer:
     _duration: 1
     _stopWhenCompleted: 1
-  _projectile: {fileID: -3455546983468122303, guid: a1a1140bdc5abfd4b923056be28d793a,
-    type: 3}
+  _projectile: {fileID: 0}
   _projectileAnchor: {fileID: 302692792940769431}
 --- !u!1 &302692792940769428
 GameObject:
@@ -653,6 +652,7 @@ GameObject:
   - component: {fileID: 302692793403659942}
   - component: {fileID: 302692793403659943}
   - component: {fileID: 302692793403659936}
+  - component: {fileID: -8712132847203881793}
   m_Layer: 0
   m_Name: Tower.Alt02
   m_TagString: Untagged
@@ -732,6 +732,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8712132847203881793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302692793403659941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9076e84e82ee746a0a192a272071b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyIfGiveDamage: 1
+  _damage: 1
+  m_ThrowerProjectile: {fileID: 0}
 --- !u!1 &302692793443834627
 GameObject:
   m_ObjectHideFlags: 0

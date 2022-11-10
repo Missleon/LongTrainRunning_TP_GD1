@@ -16,9 +16,12 @@
 		[SerializeField]
 		private DamageableDetector _damageableDetector = null;
 
+		[SerializeField]
+		private bool _enabledAtStart = false;
+
 		private void Awake()
 		{
-			enabled = false;
+			enabled = _enabledAtStart;
 		}
 
 		public void Enable(bool isEnabled)

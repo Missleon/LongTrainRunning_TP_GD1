@@ -7,7 +7,10 @@
 		[SerializeField]
 		private Timer _timer = null;
 
-		public virtual bool CanFire()
+        [SerializeField]
+        private Timer _fireRate = null;
+
+        public virtual bool CanFire()
 		{
 			return _timer.IsRunning == false;
 		}
