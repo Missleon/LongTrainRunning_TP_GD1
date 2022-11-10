@@ -11,9 +11,10 @@
 	public enum EntityType
 	{
 		None,
-		Light,
-		Heavy,
-		Speedy
+		Globe,
+		Requin,
+		Anguille,
+		Vide
 	}
 
 	[CreateAssetMenu(menuName = "GameSup/WaveDatabase")]

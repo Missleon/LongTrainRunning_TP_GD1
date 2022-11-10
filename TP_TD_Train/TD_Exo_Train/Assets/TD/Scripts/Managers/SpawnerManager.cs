@@ -51,7 +51,7 @@ namespace GSGD1
         private GameObject _phaseEnnemie;
 
         [SerializeField]
-        private float _timePhase1 = 60f;
+        private float _timePhase1 = 30f;
 
 
 
