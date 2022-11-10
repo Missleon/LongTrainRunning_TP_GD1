@@ -7,7 +7,7 @@
 	public class ProjectileLauncher : AWeapon
 	{
 		[SerializeField]
-		private LaserProjectile _projectile = null;
+		private AProjectile _projectile = null;
 
 		[SerializeField]
 		private Transform _projectileAnchor = null;
