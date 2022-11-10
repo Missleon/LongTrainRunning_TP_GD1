@@ -28,13 +28,12 @@ public class SetPath : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            List<Transform> waypointsList = _path.Waypoints;
-            //waypointsList[waypointsList.Count + 1].position = PlaceWaypoint()
+            PlaceWaypoint();
         }
 
     }
 
-    private Vector3 PlaceWaypoint(Vector3 position)
+    private void PlaceWaypoint()
     {
 
         _screenPosition = Input.mousePosition;
@@ -44,12 +43,18 @@ public class SetPath : MonoBehaviour
         RaycastHit hitdata;
 
         if (Physics.Raycast(ray, out hitdata))
-        {
+        { 
 
-            position = hitdata.point;
+            GameObject go = new GameObject();
+
+            go.transform.position = hitdata.point;
+
+            _path.SetWaypoint(go.transform);
+
+            Debug.Log(hitdata.point);
 
         }
-        return position;
+        
 
     }
 
