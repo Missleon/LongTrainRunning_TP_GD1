@@ -8,6 +8,12 @@
 		[System.NonSerialized]
 		private List<Damageable> _damageablesInRange = new List<Damageable>();
 
+		public List<Damageable> GetDamageablesInRange()
+		{
+			return _damageablesInRange;
+
+        }
+
 		public bool HasAnyDamageableInRange()
 		{
 			return _damageablesInRange.Count > 0;
@@ -47,6 +53,8 @@
 		{
 			Damageable damageable = other.GetComponentInParent<Damageable>();
 
+				
+
 			if (damageable != null && _damageablesInRange.Contains(damageable) == false)
 			{
 				damageable.DamageTaken -= Damageable_OnDamageTaken;
@@ -66,7 +74,7 @@
 			}
 		}
 
-		private void Damageable_OnDamageTaken(Damageable caller, int currentHealth, int damageTaken)
+		private void Damageable_OnDamageTaken(Damageable caller, float currentHealth, float damageTaken)
 		{
 			if (currentHealth <= 0)
 			{
