@@ -47,6 +47,8 @@
 		{
 			Damageable damageable = other.GetComponentInParent<Damageable>();
 
+				
+
 			if (damageable != null && _damageablesInRange.Contains(damageable) == false)
 			{
 				damageable.DamageTaken -= Damageable_OnDamageTaken;

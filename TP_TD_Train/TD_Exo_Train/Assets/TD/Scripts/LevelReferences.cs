@@ -12,7 +12,17 @@ namespace GSGD1
 		[SerializeField]
 		private SpawnerManager _spawnerManager = null;
 
-		public PlayerPickerController PlayerPickerController => _playerPickerController;
+		[SerializeField]
+		private GoldGestion _goldGestion; 
+
+
+        public PlayerPickerController PlayerPickerController => _playerPickerController;
 		public SpawnerManager SpawnerManager => _spawnerManager;
-	}
+
+        public GoldGestion GoldGestion => _goldGestion;
+
+
+
+
+    }
 }

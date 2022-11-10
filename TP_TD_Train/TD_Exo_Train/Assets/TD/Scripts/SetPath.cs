@@ -8,6 +8,11 @@ using UnityEngine.UIElements;
 
 public class SetPath : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject _phaseEnnemie;
+
+    [SerializeField]
+    private GameObject _phaseJoueur;
 
     [SerializeField]
     private Path _path = null;
@@ -25,11 +30,18 @@ public class SetPath : MonoBehaviour
     }
 
     private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
+    {   if(_phaseJoueur == true)
         {
-            PlaceWaypoint();
+            if (Input.GetMouseButtonDown(0))
+            {
+                PlaceWaypoint();
+            }
         }
+        
+            
+        
+        
+        
 
     }
 

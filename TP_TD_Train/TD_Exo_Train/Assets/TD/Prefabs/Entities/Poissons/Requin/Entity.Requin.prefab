@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5412690654039449867}
   - component: {fileID: 2942146037294568418}
   - component: {fileID: 2942146037294568419}
+  - component: {fileID: 91694015950206751}
   m_Layer: 0
   m_Name: Entity.Requin
   m_TagString: Untagged
@@ -81,6 +82,27 @@ MonoBehaviour:
   _aimPosition: {fileID: 2942146038031326620}
   _deathParticle: {fileID: 6159851731732633496, guid: fad479241fc5cca47b823fc8ac0cd376,
     type: 3}
+  _goldEnnemy: {fileID: 0}
+--- !u!114 &91694015950206751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942146037294568416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e7b3fd977d534e9e2d98e205c2f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 5890842221911400914, guid: 0d30208c044616b4ca75d607d7c10169, type: 3}
+  _goldRequin: 50
+  _goldPoissonGlobe: 35
+  _goldAnguille: 25
+  _anguille: 0
+  _requin: 1
+  _poissonGlobe: 0
+  _goldEnnemy: {fileID: 91694015950206751}
 --- !u!1 &2942146037963372806
 GameObject:
   m_ObjectHideFlags: 0
