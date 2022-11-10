@@ -4,6 +4,8 @@
 
 	public class Damageable : MonoBehaviour
 	{
+		
+
 		[SerializeField]
 		private int _health = 1;
 
@@ -15,6 +17,11 @@
 
 		[SerializeField]
 		private ParticleSystem _deathParticle = null;
+
+        [SerializeField]
+        private GoldEnnemie _goldEnnemy = null;
+
+		
 
 		public delegate void DamageableEvent(Damageable caller, int currentHealth, int damageTaken);
 		private event DamageableEvent _damageTaken = null;
@@ -48,15 +55,24 @@
 				if (_destroyIfKilled == true)
 				{
 					DoDestroy();
+					
 				}
 			}
 		}
 
 		private void DoDestroy()
 		{
-			var particle = Instantiate(_deathParticle);
+
+			_goldEnnemy.GoldOnDeath();
+
+            var particle = Instantiate(_deathParticle);
 			particle.transform.position = transform.position;
 			Destroy(gameObject);
+			
+		
+		
+			
 		}
 	}
+	
 }

@@ -11,6 +11,12 @@
     public class Path : MonoBehaviour
     {
         [SerializeField]
+        private GameObject _phaseJoueur;
+
+        [SerializeField]
+        private GameObject _phaseEnnemie;
+
+        [SerializeField]
         private List<Transform> _waypoints = null;
 
         [SerializeField]
@@ -52,7 +58,8 @@
 
             if (_waypoints.Count >= 6)
             {
-
+                _phaseJoueur.SetActive(false);
+                _phaseEnnemie.SetActive(true);
             }
             else
             {
